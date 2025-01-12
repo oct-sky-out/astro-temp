@@ -3,7 +3,7 @@
 import Layout from '@/layouts/Layout.astro';
 import Table from '@/components/astro-component/Table.astro'
 import ReactTestComponent from '@/components/react/ReactTestComponent';
-import Button from '@/components/vuejs/Button.vue';
+import VueTestComponent from '@/components/vuejs/VueTestComponent.vue';
 
 export const prerender = true;
 ---
@@ -20,13 +20,13 @@ export const prerender = true;
     <h1 class="text-2xl">React</h1>
     <ReactTestComponent contents={["hello", "hello2"]} client:only="react">
       <Table/>
-      <Button/>
+      <VueTestComponent/>
     </ReactTestComponent>
   </div>
   <hr>
   <div class="border-dashed border-2 border-green-500 p-5">
     <h1 class="text-2xl">Vue</h1>
-    <Button/>
+    <VueTestComponent/>
   </div>
   </div>
 </Layout>

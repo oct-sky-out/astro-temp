@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'Button'
+  name: 'VueTestComponent'
 }
 </script>
 
