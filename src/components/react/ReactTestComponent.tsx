@@ -1,7 +1,6 @@
 import { Accordion } from '@material-tailwind/react';
 
 import { NavArrowDown } from 'iconoir-react';
-import { v1 } from 'node_modules/uuid/dist/cjs';
 
 const ReactTestComponent: React.FC<{ contents: string[] }> = (props: {
 	contents: string[];
