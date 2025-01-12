@@ -1,0 +1,32 @@
+---
+
+import Layout from '@/layouts/Layout.astro';
+import Table from '@/components/astro-component/Table.astro'
+import ReactTestComponent from '@/components/react/ReactTestComponent';
+import Button from '@/components/vuejs/Button.vue';
+
+export const prerender = true;
+---
+
+
+<Layout>
+  <div class="flex flex-col space-y-7 p-10">
+  <div class="border-dashed border-2 border-blue-500 p-5">
+    <h1 class="text-2xl">ASTRO</h1>
+    <Table/>
+  </div>
+  <hr>
+  <div class="border-dashed border-2 border-red-500 p-5">
+    <h1 class="text-2xl">React</h1>
+    <ReactTestComponent contents={["hello", "hello2"]} client:only="react">
+      <Table/>
+      <Button/>
+    </ReactTestComponent>
+  </div>
+  <hr>
+  <div class="border-dashed border-2 border-green-500 p-5">
+    <h1 class="text-2xl">Vue</h1>
+    <Button/>
+  </div>
+  </div>
+</Layout>

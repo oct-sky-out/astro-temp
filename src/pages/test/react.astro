@@ -1,0 +1,31 @@
+---
+
+import { Chip } from "@material-tailwind/react";
+import Layout from '@/layouts/Layout.astro';
+import ReactTestComponent from '@/components/react/ReactTestComponent'
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+
+<Layout>
+  <ReactTestComponent contents={['Astro', "React", "Vue", "Svelte"]} client:only="react">
+    <Chip color="primary">
+      <Chip.Label>Child components chip</Chip.Label>
+    </Chip>
+    <Chip color="primary">
+      <Chip.Label>Astro</Chip.Label>
+    </Chip>
+    <Chip color="info">
+      <Chip.Label>React</Chip.Label>
+    </Chip>
+    <Chip color="secondary">
+      <Chip.Label>Vue</Chip.Label>
+    </Chip>
+    <Chip color="success">
+      <Chip.Label>Svelte</Chip.Label>
+    </Chip>
+  </ReactTestComponent>
+</Layout>
+
