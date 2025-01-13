@@ -15,5 +15,12 @@ export default defineConfig({
     experimentalReactChildren: true,
   }),
   vue()],
-
+  vite: {
+    resolve: {
+      alias: {
+        '@/': '/src',
+      },
+    },
+    appType: 'mpa',
+  },
 });
