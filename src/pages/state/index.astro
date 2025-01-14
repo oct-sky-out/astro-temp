@@ -1,13 +1,12 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import ReactStateTestComponent from '@/components/react/ReactStateTestComponent'
-import VueStateTestComponent from '@/components/vuejs/VueStateTestComponent.vue'
-import AstroStateTestComponent from '@/components/astro-component/AstroStateTestComponent.astro'
+import Layout from "@/layouts/Layout.astro";
+import ReactStateTestComponent from "@/components/react/ReactStateTestComponent";
+import VueStateTestComponent from "@/components/vuejs/VueStateTestComponent.vue";
+import AstroStateTestComponent from "@/components/astro-component/AstroStateTestComponent.astro";
 ---
 
-
 <Layout>
-  <ReactStateTestComponent client:only="react"/>
-  <VueStateTestComponent client:only="vue"/>
-  <AstroStateTestComponent/>
+  <ReactStateTestComponent client:only="react" />
+  <VueStateTestComponent client:only="vue" />
+  <AstroStateTestComponent />
 </Layout>

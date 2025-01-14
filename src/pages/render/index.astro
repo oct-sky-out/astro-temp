@@ -1,37 +1,36 @@
 ---
-
-import Layout from '@/layouts/Layout.astro';
-import Table from '@/components/astro-component/Table.astro'
-import ReactTestComponent from '@/components/react/ReactTestComponent';
-import VueTestComponent from '@/components/vuejs/VueTestComponent.vue';
+import Layout from "@/layouts/Layout.astro";
+import Table from "@/components/astro-component/Table.astro";
+import ReactTestComponent from "@/components/react/ReactTestComponent";
+import VueTestComponent from "@/components/vuejs/VueTestComponent.vue";
 
 export const prerender = true;
-
 ---
-
 
 <Layout>
   <div class="flex flex-col space-y-7 p-10">
     <div class="border-dashed border-2 border-blue-500 p-5">
       <h1 class="text-2xl">ASTRO</h1>
-      <Table/>
+      <Table />
     </div>
-    <hr>
+    <hr />
     <div class="border-dashed border-2 border-red-500 p-5">
       <h1 class="text-2xl">React</h1>
-      <ReactTestComponent contents={["hello", "hello2", "astro", 'react', 'vue']}  client:only="react">
+      <ReactTestComponent
+        contents={["hello", "hello2", "astro", "react", "vue"]}
+        client:only="react"
+      >
         <Fragment slot="fallback">
           <span>Loading....</span>
         </Fragment>
-        <Table/>
-        <VueTestComponent/>
+        <Table />
+        <VueTestComponent />
       </ReactTestComponent>
-      </div>  
-    <hr>
+    </div>
+    <hr />
     <div class="border-dashed border-2 border-green-500 p-5">
       <h1 class="text-2xl">Vue</h1>
-      <VueTestComponent/>
-    </div>
+      <VueTestComponent />
     </div>
   </div>
 </Layout>

@@ -1,15 +1,15 @@
 {
-	"extends": "astro/tsconfigs/strict",
-	"include": [".astro/types.d.ts", "**/*"],
-	"exclude": ["dist"],
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./src/*"],
-			"@i18n/*": ["./i18n/*"],
-			"@mock/*": ["./mock/*"]
-		},
-		"jsx": "preserve",
-		"jsxImportSource": "react"
-	}
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*", ".prettierrc.mjs"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@i18n/*": ["./i18n/*"],
+      "@mock/*": ["./mock/*"]
+    },
+    "jsx": "preserve",
+    "jsxImportSource": "react"
+  }
 }

@@ -1,26 +1,28 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind";
 
-import react from '@astrojs/react';
+import react from "@astrojs/react";
 
-import vue from '@astrojs/vue';
+import vue from "@astrojs/vue";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(),
-  react({
-    include: ['**/react/*'],
-    experimentalReactChildren: true,
-  }),
-  vue()],
+  integrations: [
+    tailwind(),
+    react({
+      include: ["**/react/*"],
+      experimentalReactChildren: true,
+    }),
+    vue(),
+  ],
   vite: {
     resolve: {
       alias: {
-        '@/': '/src',
+        "@/": "/src",
       },
     },
-    appType: 'mpa',
+    appType: "mpa",
   },
 });
