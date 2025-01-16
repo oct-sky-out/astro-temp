@@ -11,10 +11,10 @@ import background from "../assets/background.svg";
       <a href="https://astro.build">
         <img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" />
       </a>
-      <Button as="a" href="/render" client:only="react">
+      <a  href="/render" data-astro-prefetch="hover">
         Go And Test Astro, React, Vue Reundering page
-      </Button>
-      <Button as="a" href="/state" client:only="react">
+      </a>
+      <Button as="a" href="/state" client:only="react" data-astro-prefetch="hover">
         Go And Test Astro State manage
       </Button>
     </section>
