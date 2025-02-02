@@ -11,9 +11,7 @@ import { createMarkdownProcessor, rehypeShiki } from '@astrojs/markdown-remark'
 
 // https://astro.build/config
 export default defineConfig({
-  markdown: {
-
-  },
+  prefetch: true,
   integrations: [
     tailwind(),
     react({
