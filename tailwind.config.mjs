@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import { mtConfig } from "@material-tailwind/react";
 const thypographyPlugin = require('@tailwindcss/typography');
 
 const withMT = require("@material-tailwind/html/utils/withMT");
@@ -11,5 +12,5 @@ export default withMT({
   theme: {
     extend: {},
   },
-  plugins: [thypographyPlugin],
+  plugins: [mtConfig, thypographyPlugin()],
 });

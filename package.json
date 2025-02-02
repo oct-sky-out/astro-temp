@@ -7,8 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "test": "vitest ./src",
+    "e2e": "playwright test",
+    "coverage": "vitest run --coverage ./src",
     "lint": "eslint 'src/**/*.{js,astro,ts,tsx,vue}' --fix",
     "format": "prettier . --write",
     "prepare": "husky && husky install"
