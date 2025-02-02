@@ -33,7 +33,7 @@ const countNumber = 123;
     </button>
   </div>
 </div>
-<script define:vars={{ countNumber }}>
+<script define:vars={{ countNumber }} >
   alert(
     "Astro Nanostore State Test Component by server value : " + countNumber,
   );
@@ -42,15 +42,15 @@ const countNumber = 123;
   import { countNumber } from "@/store/counter";
 
   countNumber.subscribe((value) => {
-    document.getElementById("counter").innerText =
+    document.getElementById("counter")!.innerText =
       `nanostore number : ${value}`;
   });
 
-  document.getElementById("plus").addEventListener("click", () => {
+  document.getElementById("plus")!.addEventListener("click", () => {
     countNumber.set(countNumber.get() + 1);
   });
 
-  document.getElementById("minus").addEventListener("click", () => {
+  document.getElementById("minus")!.addEventListener("click", () => {
     countNumber.set(countNumber.get() - 1);
   });
 </script>

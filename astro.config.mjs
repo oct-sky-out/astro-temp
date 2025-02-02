@@ -7,8 +7,13 @@ import react from "@astrojs/react";
 
 import vue from "@astrojs/vue";
 
+import { createMarkdownProcessor, rehypeShiki } from '@astrojs/markdown-remark'
+
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+
+  },
   integrations: [
     tailwind(),
     react({

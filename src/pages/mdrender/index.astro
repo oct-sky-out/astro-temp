@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import MarkdownLayout from '@/layouts/MarkdownLayout.astro';
+import * as TestMarkdown from '@/markdown/test.md';
+
+const title = TestMarkdown.frontmatter.title;
+---
+
+
+<Layout>
+<h1>Title : {title}</h1>
+<MarkdownLayout>
+  <TestMarkdown.Content/>
+</MarkdownLayout>
+</Layout>
