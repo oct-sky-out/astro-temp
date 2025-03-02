@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+const { outsideJsLinks} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +17,11 @@ import { ClientRouter } from "astro:transitions";
     <slot />
   </body>
 </html>
-
+{
+  outsideJsLinks && outsideJsLinks.map((link : string) => {
+    return (<script src={link}></script>);
+  })
+}
 <style>
   html,
   body {
